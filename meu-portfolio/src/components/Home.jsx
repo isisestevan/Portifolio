@@ -1,6 +1,8 @@
 import React from "react";
 import ProfileImage from "../assets/git-profile.png";
 import { TypeAnimation } from "react-type-animation";
+import SocialIcons from "./SocialIcons";
+
 
 const Home = () => {
   return (
@@ -33,6 +35,7 @@ const Home = () => {
           maratonando filmes (time Marvel) ou curtindo a natureza pra dar aquela equilibrada. 
           Gosto de resolver problemas com tecnologia e criar soluções que realmente fazem a diferença. 
           Ah, e se tem IA no meio, já ganhou minha atenção!  </p>
+          <SocialIcons></SocialIcons>
       </div>
     </section>
   );
