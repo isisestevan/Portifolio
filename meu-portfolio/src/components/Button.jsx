@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Button = () => {
+const Button = (text,href) => {
   return (
-    <div>
-      
-    </div>
+    <a href={href}>{text}</a>
   )
 }
 

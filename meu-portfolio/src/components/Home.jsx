@@ -3,7 +3,6 @@ import ProfileImage from "../assets/git-profile.png";
 import { TypeAnimation } from "react-type-animation";
 import SocialIcons from "./SocialIcons";
 
-
 const Home = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-6">
