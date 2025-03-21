@@ -6,9 +6,9 @@ import SocialIcons from "./SocialIcons";
 const Home = () => {
   return (
     <section className="home-section">
-      <div className="md:w-1/2 flex justify-center">
+      {/* <div className="md:w-1/2 flex justify-center">
         <img src={ProfileImage} alt="GitProfile" className="profile-image" />
-      </div>
+      </div> */}
 
       <div className="home-text">
         <h1 className="home-title">

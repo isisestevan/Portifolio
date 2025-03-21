@@ -4,57 +4,13 @@
    
         color: #fff;
         background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)), url(./assets/common-bg.svg);
-
         background-size: cover;
         background-position: center;
         position: relative
     
-    
-  /*background: #dbdad5;*/
 }
 
 
-
-
-/* -------------- Header Section -------------- */
-.header {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    z-index: 50;
-    background: transparent;
-  }
-  
-  
-  .header-logo {
-    font-size: 1.875rem; 
-    font-weight: 800;
-    color: black;
-    transition: transform 0.3s;
-  }
-  
-  .header-logo:hover {
-    transform: scale(1.1);
-  }
-  
-  
-  .nav-link {
-    margin-left: 2rem;
-    font-size: 1.125rem; 
-    font-weight: 500;
-    color: black;
-    transition: color 0.3s, border-color 0.3s;
-    border-bottom: 2px solid transparent;
-  }
-  
-  .nav-link:hover {
-    color: #14532D; 
-    border-color: #14532D;
-  }
-  
 
 
 /* -------------- Home Section -------------- */
@@ -75,40 +31,7 @@
   }
   
 
-  .profile-image {
-    margin-left: -150px;
-    border-radius: 50%;
-    width: 12rem; 
-    transition: transform 0.3s;
-  }
-  
-  .profile-image:hover {
-    transform: scale(1.1);
-  }
-  
-  @media (min-width: 640px) {
-    .profile-image {
-      width: 16rem; 
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .profile-image {
-      width: 20rem;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .profile-image {
-      width: 24rem;
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    .profile-image {
-      width: 30rem; 
-    }
-  }
+ 
   
   .home-text {
     margin-right: 150px;

@@ -1,0 +1,130 @@
+/* -------------- Header Section -------------- */
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 50;
+    background: white;
+}
+
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+    transition: color 0.3s;
+}
+
+.header-logo-container:hover {
+    color: #14532D;
+}
+
+.header-logo {
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.name-logo {
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    margin-left: 2rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: black;
+    transition: color 0.3s, border-color 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #14532D;
+    border-color: #14532D;
+}
+
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    display: none; 
+}
+
+/* Menu dropdown (quando aberto) */
+.nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        text-align: right;
+        margin-left: 0;
+        margin-right: 1rem;
+        padding: 10px 0;
+    }
+
+    .nav-link:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+}
