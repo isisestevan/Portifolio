@@ -2,89 +2,92 @@
 /* -------------- App Section -------------- */
 .bg-custom-light {
    
-        color: #fff;
-        background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)), url(./assets/common-bg.svg);
-        background-size: cover;
-        background-position: center;
-        position: relative
-    
+  color: #fff;
+  background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)), url(./assets/common-bg.svg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  
+
 }
 
-
+body{
+font-family: "Segoe UI" !important
+}
 
 
 /* -------------- Home Section -------------- */
 
 .home-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 1.5rem;
-  }
-  
-  @media (min-width: 768px) {
-    .home-section {
-      flex-direction: row;
-    }
-  }
-  
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+padding: 1.5rem;
+}
 
- 
-  
-  .home-text {
-    margin-right: 150px;
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-  
-  @media (min-width: 768px) {
-    .home-text {
-      text-align: left;
-      width: 50%;
-      margin-top: 0;
-    }
-  }
-  
-  .home-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  @media (min-width: 640px) {
-    .home-title {
-      font-size: 3.75rem;
-    }
-  }
-  
-  .highlight {
-    color: #14532D; 
-  }
-  
-  .home-subtitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  @media (min-width: 640px) {
-    .home-subtitle {
-      font-size: 1.875rem;
-    }
-  }
-  
-  .home-description {
-    font-size: 0.875rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  @media (min-width: 640px) {
-    .home-description {
-      font-size: 1.125rem;
-    }
-  }
-  
+@media (min-width: 768px) {
+.home-section {
+flex-direction: row;
+}
+}
+
+
+
+
+.home-text {
+margin-right: 150px;
+text-align: center;
+margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+.home-text {
+text-align: left;
+width: 50%;
+margin-top: 0;
+}
+}
+
+.home-title {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+.home-title {
+font-size: 3.75rem;
+}
+}
+
+.highlight {
+color: #14532D; 
+}
+
+.home-subtitle {
+font-size: 1.5rem;
+font-weight: 600;
+margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+.home-subtitle {
+font-size: 1.875rem;
+}
+}
+
+.home-description {
+font-size: 0.875rem;
+margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+.home-description {
+font-size: 1.125rem;
+}
+}
+
 
 

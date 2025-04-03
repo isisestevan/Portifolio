@@ -4,32 +4,30 @@ import "../styles/header.css";
 
 const navList = [
   { id: 1, data: "Início" },
-  { id: 2, data: "Projetos" },
-  { id: 3, data: "Skills" },
-  { id: 4, data: "Educação" },
-  { id: 5, data: "Contato" }
+  { id: 2, data: "Sobre" },
+  { id: 3, data: "Projetos" },
+  { id: 4, data: "Contato" }
 ];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Função para alternar o estado do menu
+ 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // Função para detectar mudanças no tamanho da tela e fechar o menu se a tela for maior que 768px
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768 && menuOpen) {
-        setMenuOpen(false); // Fecha o menu quando a tela for maior que 768px
+        setMenuOpen(false); 
       }
     };
 
-    // Adiciona o listener de resize
+    
     window.addEventListener("resize", handleResize);
 
-    // Remove o listener quando o componente for desmontado
+   
     return () => {
       window.removeEventListener("resize", handleResize);
     };

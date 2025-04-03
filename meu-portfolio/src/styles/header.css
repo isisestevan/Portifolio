@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
     z-index: 50;
     background: white;
 }
@@ -42,7 +42,7 @@
 }
 
 .name-logo {
-    font-size: 21px;
+    font-size: 17px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
@@ -56,11 +56,14 @@
 
 .nav-link {
     margin-left: 2rem;
-    font-size: 1.125rem;
+    font-size: 14px;
     font-weight: 500;
     color: black;
     transition: color 0.3s, border-color 0.3s;
     border-bottom: 2px solid transparent;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase
 }
 
 .nav-link:hover {
