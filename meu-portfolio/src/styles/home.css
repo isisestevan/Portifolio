@@ -1,0 +1,217 @@
+/* -------------- Home Section -------------- */
+
+.home-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.home-description {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.home-text {
+    margin-right: 20px;
+    text-align: left;
+    color: black;
+    max-width: 50%;
+}
+
+.home-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: "Inter", sans-serif;
+}
+
+.highlight {
+    color: #14532d;
+}
+
+.home-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .home-section {
+        flex-direction: row;
+    }
+
+    .home-text {
+        text-align: left;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 640px) {
+    .home-title {
+        font-size: 3.75rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.875rem;
+    }
+
+    .home-description {
+        font-size: 1.125rem;
+    }
+}
+
+/* -------------- Skills Icons -------------- */
+
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-top: 2rem;
+}
+
+.icon {
+    font-size: 50px;
+    color: #ccc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+#typescript:hover {
+    color: #007acc; 
+}
+
+#js:hover {
+    color: #f7df1e; 
+}
+
+#html:hover {
+    color: #e34f26;
+}
+
+#css:hover {
+    color: #1572b6; 
+}
+
+#csharp:hover {
+    color: #9b4f96; 
+}
+
+#python:hover {
+    color: #306998; 
+}
+
+#git:hover {
+    color: #f1502f; 
+}
+
+/* Animação de flutuação */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#typescript {
+    top: 42%;
+    left: 35%;
+}
+
+#js {
+    top: 10%;
+    left: 28%;
+}
+
+#html {
+    top: 5%;
+    left: 50%;
+}
+
+#css {
+    top: 40%;
+    left: 55%;
+}
+
+#csharp {
+    top: 65%;
+    left: 20%;
+}
+
+#python {
+    top: 75%;
+    left: 48%;
+}
+
+#git {
+    top: 30%;
+    left: 10%;
+}
+
+
+
+/* -------------- Ajuste para Telas Menores (Celulares) -------------- */
+
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column; /* Coloca as divs em coluna em vez de linha */
+        align-items: center; /* Centraliza os itens */
+        padding: 2rem; /* Aumenta o espaçamento */
+    }
+
+    .home-text {
+        margin-right: 0; /* Remove o espaço à direita */
+        max-width: 100%; /* Deixa o texto ocupar toda a largura possível */
+        text-align: center; /* Centraliza o texto */
+    } 
+
+    .home-subtitle, .highlight {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+    } 
+
+    
+
+    .skills-icons {
+        display: flex;
+        flex-wrap: nowrap; /* Impede que quebrem para uma nova linha */
+        justify-content: center; /* Centraliza os ícones horizontalmente */
+        align-items: center;
+        width: 100%; /* Garante que a div ocupe toda a largura */
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 20px;
+        margin-left: 0; /* Ajusta a margem */
+    }
+
+    .icon {
+        font-size: 35px;  /* Diminui o tamanho dos ícones */
+        color: #ccc;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        margin: 0 15px; /* Adiciona espaço entre os ícones */
+    }
+
+    /* Efeito de passar o mouse sobre o ícone */
+    .icon:hover {
+        transform: scale(1.1);
+    }
+  
+}

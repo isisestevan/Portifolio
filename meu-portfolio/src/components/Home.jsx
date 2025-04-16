@@ -1,41 +1,65 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import SocialIcons from "./SocialIcons";
+import "../styles/home.css"; // Importa o CSS com os ícones
 
 const Home = () => {
   return (
     <section className="home-section">
-      {/* <div className="md:w-1/2 flex justify-center">
-        <img src={ProfileImage} alt="GitProfile" className="profile-image" />
-      </div> */}
-
+    <div className="home-content">
       <div className="home-text">
         <h1 className="home-title">
-          Oi, aqui é a <span className="highlight">Isis</span>
+          Oi, aqui é a <span className="highlight-name">Isis</span>
         </h1>
         <h3 className="home-subtitle">
-          Sou <span className="highlight">
+          Sou{" "}
+          <span className="highlight">
             <TypeAnimation
               sequence={[
-                "Cientista da Computação", 1000,
-                "Dev FullStack", 1000,
-                "Entusiasta de Machine Learning", 1000
+                "Cientista da Computação.",
+                1000,
+                "Dev FullStack.",
+                1000,
+                "Entusiasta de Machine Learning.",
+                1000,
               ]}
               speed={50}
               repeat={Infinity}
             />
           </span>
         </h3>
-        <p className="home-description">
-        Sou uma Desenvolvedora Fullstack formada em Ciência da Computação pela Universidade de Itaúna, apaixonada por Machine Learning e soluções inteligentes. Construo aplicações web que resolvem problemas de forma eficiente e impactante.
-
-Além do código, também gosto de compartilhar conhecimento sobre tecnologia e inteligência artificial, ajudando a comunidade dev a crescer. Quando não estou programando, estou na cozinha testando receitas, maratonando filmes (time Marvel!) ou aproveitando a natureza para equilibrar tudo.
-
-Estou aberta a oportunidades onde eu possa aprender, crescer e contribuir com minhas habilidades. Se tiver algo que combine comigo, não hesite em entrar em contato!
-        </p>
-        <SocialIcons />
       </div>
-    </section>
+  
+      <div className="about-box">
+        <h3 className="about-subtitle">Quem sou eu?</h3>
+        <p>...</p>
+      </div>
+    </div>
+  
+    <div className="skills-icons">
+      <div className="icon" id="typescript">
+        <i className="devicon-typescript-plain"></i>
+      </div>
+      <div className="icon" id="js">
+        <i className="devicon-javascript-plain"></i>
+      </div>
+      <div className="icon" id="html">
+        <i className="devicon-html5-plain"></i>
+      </div>
+      <div className="icon" id="css">
+        <i className="devicon-css3-plain"></i>
+      </div>
+      <div className="icon" id="csharp">
+        <i className="devicon-csharp-plain"></i>
+      </div>
+      <div className="icon" id="python">
+        <i className="devicon-python-plain"></i>
+      </div>
+      <div className="icon" id="git">
+        <i className="devicon-git-plain"></i>
+      </div>
+    </div>
+  </section>
+  
   );
 };
 
