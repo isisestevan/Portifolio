@@ -2,13 +2,22 @@
 
 .home-section {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
     min-height: 100vh;
     padding: 1.5rem;
-    flex-wrap: wrap;
     padding-top: 100px;
+    text-align: center; 
 }
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .home-description {
     font-size: 0.875rem;
@@ -16,14 +25,13 @@
 }
 
 .home-text {
-    margin-right: 20px;
-    text-align: left;
+    margin: 0 auto; 
+    max-width: 600px; 
     color: black;
-    max-width: 50%;
 }
 
 .home-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
     font-family: "Inter", sans-serif;
@@ -39,30 +47,6 @@
     margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
-    .home-section {
-        flex-direction: row;
-    }
-
-    .home-text {
-        text-align: left;
-        margin-right: 20px;
-    }
-}
-
-@media (min-width: 640px) {
-    .home-title {
-        font-size: 3.75rem;
-    }
-
-    .home-subtitle {
-        font-size: 1.875rem;
-    }
-
-    .home-description {
-        font-size: 1.125rem;
-    }
-}
 
 /* -------------- Skills Icons -------------- */
 
@@ -75,6 +59,7 @@
     height: auto;
     padding: 20px;
     margin-top: 2rem;
+    gap: 2rem;
 }
 
 .icon {
@@ -132,86 +117,178 @@
     }
 }
 
-#typescript {
-    top: 42%;
-    left: 35%;
+.scroll-down {
+    margin-top: 6rem;
+    font-size: 1.5rem;
+    color: #555;
+    animation: bounce 2s infinite;
 }
 
-#js {
-    top: 10%;
-    left: 28%;
-}
-
-#html {
-    top: 5%;
-    left: 50%;
-}
-
-#css {
-    top: 40%;
-    left: 55%;
-}
-
-#csharp {
-    top: 65%;
-    left: 20%;
-}
-
-#python {
-    top: 75%;
-    left: 48%;
-}
-
-#git {
-    top: 30%;
-    left: 10%;
-}
-
-
-
-/* -------------- Ajuste para Telas Menores (Celulares) -------------- */
-
-@media (max-width: 768px) {
-    .home-section {
-        flex-direction: column; /* Coloca as divs em coluna em vez de linha */
-        align-items: center; /* Centraliza os itens */
-        padding: 2rem; /* Aumenta o espaçamento */
+/* Animação da setinha */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
     }
-
-    .home-text {
-        margin-right: 0; /* Remove o espaço à direita */
-        max-width: 100%; /* Deixa o texto ocupar toda a largura possível */
-        text-align: center; /* Centraliza o texto */
-    } 
-
-    .home-subtitle, .highlight {
-        font-size: 1.2rem; /* Ajusta o tamanho da fonte */
-    } 
-
-    
-
-    .skills-icons {
-        display: flex;
-        flex-wrap: nowrap; /* Impede que quebrem para uma nova linha */
-        justify-content: center; /* Centraliza os ícones horizontalmente */
-        align-items: center;
-        width: 100%; /* Garante que a div ocupe toda a largura */
-        height: auto; /* Ajusta a altura automaticamente */
-        padding: 20px;
-        margin-left: 0; /* Ajusta a margem */
+    50% {
+        transform: translateY(10px);
     }
+} 
 
-    .icon {
-        font-size: 35px;  /* Diminui o tamanho dos ícones */
-        color: #ccc;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        margin: 0 15px; /* Adiciona espaço entre os ícones */
-    }
+.scroll-down:hover {
+    color: #14532d; 
+} 
 
-    /* Efeito de passar o mouse sobre o ícone */
-    .icon:hover {
-        transform: scale(1.1);
+
+/* -------------- Responsividade -------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .home-title {
+      font-size: 2.8rem;
     }
   
-}
+    .home-subtitle {
+      font-size: 1.3rem;
+    }
+  
+    .skills-icons {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr); /* 8 colunas */
+      gap: 2rem;
+      width: 100%;
+      max-width: 600px;
+      justify-content: center;
+      justify-items: center;
+      padding: 15px;
+    }
+  
+    /* Ícones posicionados 4 em cima, 3 embaixo */
+    .skills-icons .icon:nth-child(1) {
+      grid-column: 1 / span 2;
+    }
+    .skills-icons .icon:nth-child(2) {
+      grid-column: 3 / span 2;
+    }
+    .skills-icons .icon:nth-child(3) {
+      grid-column: 5 / span 2;
+    }
+    .skills-icons .icon:nth-child(4) {
+      grid-column: 7 / span 2;
+    }
+    .skills-icons .icon:nth-child(5) {
+      grid-column: 2 / span 2;
+      margin-top: 20px;
+    }
+    .skills-icons .icon:nth-child(6) {
+      grid-column: 4 / span 2;
+      margin-top: 20px;
+    }
+    .skills-icons .icon:nth-child(7) {
+      grid-column: 6 / span 2;
+      margin-top: 20px;
+    }
+  
+    .icon {
+      font-size: 45px;
+    }
+  
+    .scroll-down {
+      margin-top: 8rem;
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* Celulares */
+  @media (max-width: 768px) {
+    .home-section {
+      padding: 1rem;
+      padding-top: 80px;
+    }
+  
+    .home-title {
+      font-size: 2.2rem;
+    }
+  
+    .home-subtitle {
+      font-size: 1.1rem;
+    }
+  
+    .skills-icons {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr); /* 8 colunas */
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 400px;
+      justify-content: center;
+      justify-items: center;
+      padding: 10px;
+    }
+  
+    /* Ícones posicionados 4 em cima, 3 embaixo */
+    .skills-icons .icon:nth-child(1) {
+      grid-column: 1 / span 2;
+    }
+    .skills-icons .icon:nth-child(2) {
+      grid-column: 3 / span 2;
+    }
+    .skills-icons .icon:nth-child(3) {
+      grid-column: 5 / span 2;
+    }
+    .skills-icons .icon:nth-child(4) {
+      grid-column: 7 / span 2;
+    }
+    .skills-icons .icon:nth-child(5) {
+      grid-column: 2 / span 2;
+      margin-top: 20px;
+    }
+    .skills-icons .icon:nth-child(6) {
+      grid-column: 4 / span 2;
+      margin-top: 20px;
+    }
+    .skills-icons .icon:nth-child(7) {
+      grid-column: 6 / span 2;
+      margin-top: 20px;
+    }
+  
+    .icon {
+      font-size: 40px;
+    }
+  
+    .scroll-down {
+      margin-top: 10rem;
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Celulares muito pequenos (tipo iPhone SE) */
+  @media (max-width: 480px) {
+    .home-title {
+      font-size: 1.8rem;
+    }
+  
+    .home-subtitle {
+      font-size: 1rem;
+    }
+  
+    .skills-icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Mantém 4 colunas para não apertar muito */
+      gap: 1rem;
+      width: 100%;
+      max-width: 300px;
+      justify-content: center;
+      justify-items: center;
+      padding: 10px;
+    }
+  
+    .icon {
+      font-size: 35px;
+    }
+  
+    .scroll-down {
+      margin-top: 12rem;
+      font-size: 1rem;
+    }
+  }
+
+  /* AJUSTAR RESPONSIVODADEoo*/
