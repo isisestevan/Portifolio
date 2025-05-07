@@ -3,16 +3,15 @@ import profileImg from "../assets/profile.jpg";
 import "../styles/header.css";
 
 const navList = [
-  { id: 1, data: "Início" },
-  { id: 2, data: "Sobre" },
-  { id: 3, data: "Projetos" },
-  { id: 4, data: "Contato" }
+  { id: 1, label: "Início", href: "#inicio" },
+  { id: 2, label: "Sobre", href: "#sobre" },
+  { id: 3, label: "Projetos", href: "#projetos" },
+  { id: 4, label: "Contato", href: "#contato" },
 ];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
- 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -20,14 +19,12 @@ const Header = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768 && menuOpen) {
-        setMenuOpen(false); 
+        setMenuOpen(false);
       }
     };
 
-    
     window.addEventListener("resize", handleResize);
 
-   
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -44,8 +41,13 @@ const Header = () => {
 
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
         {navList.map((item) => (
-          <a key={item.id} href="#" className="nav-link">
-            {item.data}
+          <a
+            key={item.id}
+            href={item.href}
+            className="nav-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            {item.label}
           </a>
         ))}
       </nav>

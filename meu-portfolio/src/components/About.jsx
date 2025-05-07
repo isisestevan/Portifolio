@@ -6,11 +6,10 @@ const About = () => {
     <section className="about-container">
       <h2 className="about-title">Sobre</h2>
       <p className="about-description">
-        Aqui você vai encontrar mais informações sobre mim, o que faço e as minhas principais habilidades em tecnologia e programação.
+        Aqui você vai encontrar mais informações sobre mim.
       </p>
 
       <div className="about-content">
-        {/* Descrição */}
         <div className="about-box">
           <h3 className="about-subtitle">Quem sou eu?</h3>
           <p>
@@ -22,31 +21,6 @@ const About = () => {
           <p>
             Estou aberta a oportunidades onde eu possa aprender, crescer e contribuir com minhas habilidades. Se tiver algo que combine comigo, não hesite em entrar em contato!
           </p>
-        </div>
-
-        {/* Skills */}
-        <div className="about-box">
-          <h3 className="about-subtitle">Minhas Skills</h3>
-          <div className="skills-grid">
-            {[
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "Angular",
-              "Node.js",
-              "Express",
-              "MongoDB",
-              "PostgreSQL",
-              "Python",
-              "Machine Learning",
-              "Git",
-              "Docker",
-            ].map((skill) => (
-              <div key={skill} className="skill-item">
-                {skill}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

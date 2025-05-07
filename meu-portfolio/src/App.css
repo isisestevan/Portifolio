@@ -1,25 +1,29 @@
 /* Importando a fonte Inter do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "~font-awesome/css/font-awesome.css";
-@import url('https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css');
-
+@import url("https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css");
 
 /* -------------- App Section -------------- */
 .bg-custom-light {
-   
   color: #fff;
-  background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)), url(./assets/common-bg.svg);
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url(./assets/common-bg.svg);
   background-size: cover;
   background-position: center;
   position: relative;
-  
-
 }
 
-body{
-font-family: "Segoe UI" !important
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px;
 }
 
-
-
-
+body {
+  font-family: "Segoe UI" !important;
+}
